@@ -1,0 +1,102 @@
+<!DOCTYPE html>
+<html>
+  <head>
+    <title> TASK3</title>
+    <style>
+      body {
+        background-color: cyan;
+        font-family: Arial, sans-serif;
+        
+        display: flex;
+        justify-content: center;
+        align-items: center;
+        height: 100vh;
+        margin: 0;
+      }
+      
+      .container {
+        
+        justify-content: center;
+        align-items: center;
+        gap: 20px;
+        width: 300px;
+        background-color: lightgrey;
+        padding: 20px;
+        border-radius: 0px;
+      }
+      .container-1{
+        
+        justify-content: center;
+        align-items: center;
+        gap: 20px;
+        width: 300px;
+        background-color: lightgray;
+        padding: 25px;
+        border-radius: 0px;
+      }
+      
+      .form-container {
+        display: flex;
+        flex-direction: column;
+        gap: 10px;
+        width: 100%;
+      }
+      
+      input[type="text"],
+      input[type="password"] {
+        border: 1px solid blue;
+        border-radius: 5px;
+        padding: 5px;
+        font-size: 16px;
+      }
+      
+      button {
+        background-color: blue;
+        color: white;
+        border: none;
+        border-radius: 5px;
+        padding: 10px;
+        font-size: 18px;
+        cursor: pointer;
+      }
+      
+      .btn-container {
+        display: flex;
+        gap: 20px;
+      }
+    </style>
+  </head>
+  <body>
+    <div class="container">
+      <div class="form-container">
+        <div class="btn-container">
+          <button style="background-color: white;color: black;">SIGN IN</button>
+          <button style="background-color: blue">SIGN UP</button>
+        </div>
+        <div class="icon-container" style="display: flex;">
+          <div style="margin-right: 30px;border-radius: 5px;background-color: blue;width: 80px; ">
+            <img src="https://cdn3.iconfinder.com/data/icons/capsocial-round/500/facebook-512.png" alt="Facebook" width="40" height="40">
+          </div>
+          <div style="border-radius: 5px;background-color: orange;width: 80px;">
+            <img src="https://cdn4.iconfinder.com/data/icons/new-google-logo-2015/400/new-google-favicon-512.png" alt="Google" width="40" height="40">
+          </div>
+        </div>
+        <input type="text" placeholder="E-mail">
+        <input type="password" placeholder="Password">
+        <button>SIGN IN</button>
+      </div>
+      </div>
+      <div class="container-1">
+       <div class="form-container">
+        <div class="btn-container">
+          <button style="background-color: blue">SIGN IN</button>
+          <button style="background-color: white;color: black;">SIGN UP</button>
+        </div>
+        <input type="text" placeholder="Username">
+        <input type="text" placeholder="E-mail">
+        <input type="password" placeholder="Password">
+        <button>SIGN IN</button>
+      </div>
+    </div>
+  </body>
+</html>

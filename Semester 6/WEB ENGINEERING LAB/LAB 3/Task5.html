@@ -1,0 +1,111 @@
+<!DOCTYPE html>
+<html>
+<head>
+	<title>task5</title>
+	<style>
+		body {
+			margin: 0;
+			padding: 0;
+			font-family: Arial, sans-serif;
+		}
+		
+		/* Header */
+		header {
+			background-color: #333;
+			color: #fff;
+			padding: 10px;
+		}
+		
+		h1 {
+			margin: 0;
+			font-size: 24px;
+			display: inline-block;
+			vertical-align: middle;
+		}
+		
+		/* Navigation Bar */
+		nav {
+			display: inline-block;
+			vertical-align: middle;
+		}
+		
+		nav ul {
+			margin: 0;
+			padding: 0;
+			list-style: none;
+			display: inline-block;
+		}
+		
+		nav ul li {
+			float: left;
+			position: relative;
+		}
+		
+		/* Descendant Selector */
+		nav ul ul {
+			display: none;
+			position: absolute;
+			top: 100%;
+			left: 0;
+			background-color: #fff;
+			box-shadow: 0 3px 6px rgba(0, 0, 0, 0.2);
+			padding: 10px;
+		}
+		
+		nav ul li:hover > ul {
+			display: block;
+		}
+		
+		/* Child Selector */
+		nav > ul > li {
+			margin-right: 10px;
+		}
+		
+		/* Adjacent Sibling Selector */
+		nav ul ul > li + li {
+			margin-top: 5px;
+		}
+		
+		/* General Sibling Selector */
+		nav ul ul > li ~ li {
+			margin-left: 10px;
+		}
+		
+		nav a {
+			color: #fff;
+			display: block;
+			padding: 10px;
+			text-decoration: none;
+		}
+		
+		nav ul ul a {
+			color: #333;
+			padding: 5px 10px;
+		}
+		
+		nav a:hover {
+			background-color: #555;
+		}
+	</style>
+</head>
+<body>
+	<header>
+		<h1 style="text-align: center;">WELCOME </h1>
+    <br>
+		<nav>
+			<ul>
+				<li><a href="#">Home</a></li>
+				<li><a href="#">Products</a>
+					<ul>
+						<li><a href="#">Product 1</a></li>
+						<li><a href="#">Product 2</a></li>
+						<li><a href="#">Product 3</a></li>
+					</ul>
+				</li>
+				<li><a href="#">About Us</a></li>
+				<li><a href="#">Contact Us</a></li>
+			</ul>
+		</nav>
+	</header>
+</body>
+</html>

@@ -1,0 +1,156 @@
+<!DOCTYPE html>
+<html>
+<head>
+	<title>TASK 6</title>
+	<style>
+        .mycart {
+            display: flex;
+			margin-bottom: 10px;
+
+        }
+		.cart {
+			padding: 10px;
+			max-width: 400px;
+		}
+		.product {
+			display: flex;
+			margin-bottom: 10px;
+		}
+		.product img {
+			width: 50px;
+			height: 50px;
+			margin-right: 10px;
+		}
+		.product-info {
+			flex-grow: 1;
+			display: flex;
+			align-items: center;
+		}
+		.product-info .label {
+			flex-grow: 1;
+			font-weight: bold;
+			margin-right: 10px;
+		}
+		.product-info .price {
+			margin-right: 10px;
+		}
+		.product-info .quantity {
+			width: 50px;
+			margin-right: 10px;
+		}
+		.product-info .total {
+			margin-right: 10px;
+		}
+		.product-info .remove {
+			background-color: red;
+			color: white;
+			border: none;
+			width: 20px;
+			height: 20px;
+			font-weight: bold;
+			font-size: 12px;
+			border-radius: 30%;
+			display: flex;
+			justify-content: center;
+			align-items: center;
+		}
+		.total {
+			display: flex;
+			justify-content: space-between;
+			margin-top: 10px;
+			font-weight: bold;
+		}
+		.discount {
+			color: red;
+			margin-top: 10px;
+			font-weight: bold;
+            display: flex;
+            justify-content: space-between;
+		}
+		.checkout {
+			display: flex;
+			justify-content: space-between;
+			margin-top: 10px;
+			align-items: center;
+		}
+		.checkout button {
+			color: white;
+			border: none;
+			padding: 10px;
+			border-radius: 5px;
+			cursor: pointer;
+			font-weight: bold;
+		}
+		.checkout .close {
+			background-color: grey;
+            margin-left: 65%;
+            margin-top: 10px;
+		}
+		.checkout .checkout {
+			background-color: blue;
+		}
+	</style>
+</head>
+<body>
+    <div class="mycart">
+
+    
+    <img src="cart.png" width="50px">
+    <h1> My Cart</h1>
+</div>
+    <hr>
+
+    <hr>
+	<div class="cart">
+		<div class="product">
+			<img src="juice.png">
+			<div class="product-info">
+				<div class="label">Product 1</div>
+				<div class="price">$10</div>
+				<input type="number" class="quantity" value="1">
+                
+				<div class="total">$20</div>
+				<button class="remove">X</button>
+			</div>
+            
+		</div>
+        <hr>
+		<div class="product">
+			<img src="camera.png">
+			<div class="product-info">
+				<div class="label">Product 3</div>
+				<div class="price">$30</div>
+				<input type="number" class="quantity" value="1">
+				<div class="total">$180</div>
+				<button class="remove">X</button>
+			</div>
+		</div>
+        <hr>
+		<div class="product">
+			<img src="iron.png">
+			<div class="product-info">
+				<div class="label">Product 4</div>
+				<div class="price">$40</div>
+				<input type="number" class="quantity">
+
+                <div class="total">$40</div>
+                <button class="remove">X</button>
+            </div>
+        </div>
+        <hr>
+        <div class="total">
+            <div>Total:</div>
+            <div>$240</div>
+        </div>
+        <hr>
+        <div class="discount">
+            <div>Total (including discount)</div>
+            <div>$120</div>
+        </div>
+        <hr>
+        <div class="checkout">
+            <button class="close">Close</button>
+            <button class="checkout">Checkout</button>
+        </div>
+    </div>
+    

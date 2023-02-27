@@ -1,0 +1,65 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>TASK7</title>
+</head>
+<style>
+    .container {
+  position: relative;
+}
+
+.image {
+  opacity: 0.5;
+  width: 70%;
+  height: auto;
+}
+
+.text {
+  position: absolute;
+  color: black;
+  font-size: 20px;
+  
+}
+
+.top-left {
+  top: 1%;
+  left: 1%;
+}
+
+.top-right {
+  top: 1%;
+  right: 31%;
+}
+
+.bottom-left {
+  bottom: 1%;
+  left: 1%;
+}
+
+.bottom-right {
+  bottom: 1%;
+  right: 31%;
+}
+
+.center {
+  top: 50%;
+  left: 35%;
+  transform: translate(-50%, -50%);
+}
+
+</style>
+<body>
+    <div class="container">
+        <img src="i.jpg" alt="img not found" class="image">
+        <div class="text top-left">Top Left</div>
+        <div class="text top-right">Top Right</div>
+        <div class="text bottom-left">Bottom Left</div>
+        <div class="text bottom-right">Bottom Right</div>
+        <div class="text center">Centered</div>
+      </div>
+      
+</body>
+</html>

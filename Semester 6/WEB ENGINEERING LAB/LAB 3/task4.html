@@ -1,0 +1,140 @@
+<!DOCTYPE html>
+<html>
+  <head>
+    <link href='https://fonts.googleapis.com/css?family=Poppins' rel='stylesheet'>
+
+    <title>TASK4</title>
+    <style>
+      body {
+        background-color: aqua;
+        font-family: Poppins;
+      }
+      
+      .container {
+        display: flex;
+        height: 500px;
+      }
+      .left {
+        width: 50%;
+        background-color: white;
+        padding: 20px;
+        display: flex;
+        flex-direction: column;
+        justify-content: space-between;
+      }
+      .right {
+        width: 30%;
+        background-color: blue;
+        color: white;
+        padding: 20px;
+        display: flex;
+        flex-direction: column;
+        justify-content: space-between;
+      }
+      form {
+        display: flex;
+        flex-direction: column;
+      }
+      label {
+        font-weight: bold;
+        margin-bottom: 5px;
+        display: inline-block;
+        width: 80px;
+        color: blue;
+      }
+      input[type="text"],
+      input[type="email"],input[type="tel"]{
+        border: none;
+        padding-top: 10px;
+        border-bottom: 2px solid rgb(208, 208, 208);
+        width: 250px;
+        box-sizing: border-box;
+      }
+
+      textarea {
+        
+        padding-top: 10px;
+        border-bottom: 2px solid rgb(208, 208, 208);
+        width: 750px;
+        box-sizing: border-box;
+
+
+        
+      }
+      input[type="submit"] {
+        padding: 10px 25px 8px 25px;
+            border-radius: 15px;
+            border: none;
+            background-color: blue;
+            color: white;
+            width: 120px;
+            margin-top: 20px;
+      }
+      .left > form > div {
+        display: flex;
+        justify-content: space-between;
+      }
+      .left > form > div > label,
+      .left > form > div > input {
+        width: 48%;
+      }
+      .row{
+            width: 100%;
+        }
+    </style>
+  </head>
+  <body>
+    <h1>Connect With Us</h1>
+    <p>We would love to respond to your queries and help you succeed. <br>Feel free to get in touch with us.</p>
+    <div class="container">
+      <div class="left">
+        <h2 style="color: blue;">Send Your Request</h2>
+        <form>
+            <div class="row">
+                <div class="colm1">
+                    <form action="">
+                    <label for="name">Name</label><br>
+                    <input   type="text" name="name" id="name" placeholder="John Amendo"><br><br>
+
+                    <label for="email">Email</label><br>
+                    <input type="email" name="email" id="email" placeholder="johnamendo@gmail.com"><br><br>
+                    <label for="subject">Message</label><br>
+
+                </div>
+                
+                
+                <div class="colm2" style="margin-left: 10px;">
+                    <label for="phone">Phone</label><br>
+                    <input  type="tel" name="phone" id="phone" pattern="[+][0-9]{1} [0-9]{3} [0-9]{3} [0-9]{4}" placeholder="+1 412 520 3231"><br><br>
+
+                    <label for="subject">Subject</label><br>
+                    <input type="text" name="subject" id="subject" placeholder="Product Demo"><br><br>
+                </div>
+                
+            </div>
+          <textarea id="message" name="message" rows="5"placeholder="your Message"></textarea>
+          <input type="submit" value="SEND">
+        </form>
+      </div>
+      <div class="right">
+        <h2>Reach Us</h2>
+        <div style="display: flex;margin-bottom: 200px;">
+            <p>Email</p>
+            <span style="margin-left: 100px;margin-top: 15px;">contactus@gmail.com</span>
+        </div>
+        <div style="display: flex;margin-top: -40px;width: auto;">
+            <p style="margin-top: -160px;">Phone </p>
+            <span style="margin-left: 100px;margin-top: -160px;">+1 012 345 6789</span>
+        </div>
+        <div style="display: flex;margin-top: -50px;width: auto;">
+            <p style="margin-top: -50px;">Address </p>
+            <span style="margin-left: 100px;margin-top: -60px;">#212, Ground floor, 7th cross Some layout, Some Road, Karumangla Bengluro 560001</span>
+        </div>
+    
+        
+
+
+      </div>
+    </div>
+  </body>
+</html>
