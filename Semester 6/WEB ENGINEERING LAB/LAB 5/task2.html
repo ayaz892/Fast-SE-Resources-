@@ -1,0 +1,82 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <meta http-equiv="X-UA-Compatible" content="ie=edge">
+    <title>Task2</title>
+    <link rel="stylesheet" href="https://maxcdn.bootstrapcdn.com/bootstrap/4.0.0/css/bootstrap.min.css">
+
+</head>
+<body>
+    <div class="container-fluid text-center">
+        <h1 style="text-align: center;">To Do App</h1>
+        <nav class="navbar navbar-light bg-light ml-5 ">
+            <div class="container-fluid">
+              <form action="">
+                  <div class="row">
+                      <div class="col-6">
+                        <input class="form-control me-2" type="search" placeholder="Enter a task here" aria-label="Search">
+
+                      </div>
+                      <div class="col-3">
+                        <button class="btn btn-primary ml-3" type="submit">Save</button>
+
+                      </div>
+                      <div class="col-3 ">
+                        <button class="btn btn-warning ml-3" type="submit">Get a task</button>
+
+                      </div>
+                  </div>
+
+              </form>
+            </div>
+          </nav>
+    </div>
+    <table class="table">
+        <thead>
+          <tr>
+            <th scope="col">No</th>
+            <th scope="col">Todo item</th>
+            <th scope="col">Status</th>
+            <th scope="col">Actions</th>
+          </tr>
+        </thead>
+        <tbody>
+          <tr>
+            <th scope="row">1</th>
+            <td>Buy groceries for next week</td>
+            <td>In progress</td>
+            <td>
+                <button class="btn btn-danger ml-3" type="submit">DELETE</button>
+                <button class="btn btn-success ml-3" type="submit">FINISHED</button>
+
+            </td>
+          </tr>
+          <tr>
+            <th scope="row">2</th>
+            <td>Renew car insurance</td>
+            <td>In progress</td>
+            <td>
+                <button class="btn btn-danger ml-3" type="submit">DELETE</button>
+                <button class="btn btn-success ml-3" type="submit">FINISHED</button>
+
+            </td>
+          </tr>
+          <tr>
+            <th scope="row">3</th>
+            <td>Sign up for online course</td>
+            <td>In progress</td>
+            <td>
+                <button class="btn btn-danger ml-3" type="submit">DELETE</button>
+                <button class="btn btn-success ml-3" type="submit">FINISHED</button>
+
+            </td>
+          </tr>
+        </tbody>
+      </table>
+</body>
+<script src="https://code.jquery.com/jquery-3.2.1.slim.min.js"></script>
+  <script src="https://cdnjs.cloudflare.com/ajax/libs/popper.js/1.12.9/umd/popper.min.js"></script>
+  <script src="https://maxcdn.bootstrapcdn.com/bootstrap/4.0.0/js/bootstrap.min.js"></script>
+</html>
