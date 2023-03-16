@@ -1,0 +1,100 @@
+<!DOCTYPE html>
+<html>
+  <head>
+    <title>task4</title>
+    <style>
+      button {
+        font-size: 24px;
+        width: 50px;
+        height: 50px;
+        margin: 5px;
+        border-radius: 10px;
+      }
+      input {
+        font-size: 24px;
+        width: 250px;
+        height: 50px;
+        margin: 5px;
+      }
+      h1{
+        text-align: center;
+      }
+      
+
+    </style>
+  </head>
+  <body style="background-color: darkgoldenrod;">
+    <h1 >JavaScript Calculator</h1>
+    <form style="margin-left: 600px;">
+      <input type="text" id="result" name="result" readonly><br>
+      
+      <button type="button" onclick="append('7')">7</button>
+      <button type="button" onclick="append('8')">8</button>
+      <button type="button" onclick="append('9')">9</button>
+      <button type="button" onclick="operate('+')">+</button><br>
+      <button type="button" onclick="append('4')">4</button>
+      <button type="button" onclick="append('5')">5</button>
+      <button type="button" onclick="append('6')">6</button>
+      <button type="button" onclick="operate('-')">-</button><br>
+      <button type="button" onclick="append('1')">1</button>
+      <button type="button" onclick="append('2')">2</button>
+      <button type="button" onclick="append('3')">3</button>
+      <button type="button" onclick="operate('*')">*</button><br>
+      <button type="button" onclick="append('0')">0</button>
+      <button type="button" onclick="operate('%')">%</button>
+      <button type="button" onclick="operate('.')">.</button>
+      <button type="button" onclick="operate('/') ">/</button><br>
+
+      <button type="button"style="width: 115px" onclick="calculate()">=</button>
+      <button type="button"style="width: 115px" onclick="clearResult()">C</button>
+    </form>
+
+    <script>
+      let current = "";
+      let operator = "";
+      let result = 0;
+
+      function append(value) {
+        current += value;
+        document.getElementById("result").value = current;
+      }
+
+      function operate(value) {
+        operator = value;
+        result = parseInt(current);
+        current = "";
+      }
+
+      function calculate() {
+        let second = parseInt(current);
+        switch (operator) {
+          case "+":
+            result += second;
+            break;
+          case "-":
+            result -= second;
+            break;
+          case "*":
+            result *= second;
+            break;
+          case "/":
+            result /= second;
+            break;
+          case "%":
+            result %= second;
+            break;
+         
+        }
+        document.getElementById("result").value = result;
+        current = "";
+      }
+
+      function clearResult() {
+        current = "";
+        operator = "";
+        result = 0;
+        document.getElementById("result").value = "";
+      }
+    </script>
+  </body>
+</html>

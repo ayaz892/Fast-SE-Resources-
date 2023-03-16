@@ -1,0 +1,34 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>task5</title>
+</head>
+<body>
+    <p id="palind"></p>
+    <script>
+        function palindrome(string)
+        {
+            const length=string.length;
+            for(var i=0;i<length/2;i++)
+            {
+                if(string[i]==string[length-1-i])
+                {
+                    return 'Palindrome';
+                }
+                return 'Not Palindrome';
+
+            }
+        }
+
+        let str=prompt("Enter the String:");
+        let check=palindrome(str);
+        document.getElementById("palind").innerHTML=check;
+
+
+    </script>
+    
+</body>
+</html>

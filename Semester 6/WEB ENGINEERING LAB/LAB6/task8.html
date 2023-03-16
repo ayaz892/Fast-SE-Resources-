@@ -1,0 +1,53 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>task8</title>
+    <style>
+        #slider {
+  width: 500px;
+  height: 300px;
+  overflow: hidden;
+}
+
+#slider img {
+  width: 500px;
+  height: 300px;
+  display: none;
+}
+
+    </style>
+</head>
+<body>
+    <div id="slider">
+        <img src="img1.jpg" />
+        <img src="img2.png" />
+        <img src="img3.png" />
+      </div>
+      <script>
+        var slider = document.getElementById("slider");
+var images = slider.getElementsByTagName("img");
+var current = 0;
+
+function nextImage() {
+  images[current].style.display = "none";
+
+  current++;
+
+  if (current >= images.length) {
+    current = 0;
+  }
+
+  images[current].style.display = "block";
+}
+
+images[current].style.display = "block";
+
+setInterval(nextImage, 3000);
+
+      </script>
+      
+</body>
+</html>
