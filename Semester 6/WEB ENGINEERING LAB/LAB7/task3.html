@@ -1,0 +1,44 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Task3</title>
+    <script src="https://ajax.googleapis.com/ajax/libs/jquery/3.6.3/jquery.min.js"></script>
+    <script>
+        $(document).ready(function() {
+            $('#next-btn').click(function() {
+                $('.progress-bar').animate({width: '100%'}, 500, function() {
+                    window.location.href = 'new.html';
+    });
+  });
+});
+
+    </script>
+<style>
+    .progress-bar-wrapper {
+  width: 100%;
+  height: 20px;
+  background-color: #ddd;
+  margin-bottom: 20px;
+}
+
+.progress-bar {
+  height: 100%;
+  width: 0;
+  background-color: red;
+  transition: width 0.5s ease-in-out;
+}
+
+</style>
+</head>
+<body>
+    <div class="progress-bar-wrapper">
+        <div class="progress-bar"></div>
+      </div>
+      
+      <button id="next-btn">Next</button>
+      
+</body>
+</html>

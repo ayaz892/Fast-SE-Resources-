@@ -1,0 +1,162 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>task7</title>
+    <script src="https://ajax.googleapis.com/ajax/libs/jquery/3.6.3/jquery.min.js"></script>
+    <script>
+$(document).ready(function() {
+  // Handle form submission
+  $("#quiz-form").submit(function(event) {
+    // Prevent default form submission
+    event.preventDefault();
+
+    // Check if all questions are answered
+    var unansweredQuestions = $("select:empty, input:radio:not(:checked)").length;
+    
+
+    // Calculate score
+    var score = 0;
+    $("select, input:radio:checked").each(function() {
+      var correctAnswer = $(this).data("correct-answer");
+      if ($(this).val() === correctAnswer) {
+        score++;
+      }
+    });
+
+    // Display results
+    $("#score").text(score);
+    $("#result-card").show();
+
+    // Hide form
+    $("#quiz-form").hide();
+
+    // Animate progress bar
+    var progress = score * 20;
+    $(".progress-bar").css("width", progress + "%");
+  });
+
+  // Reset quiz
+  $("#reset-quiz").click(function() {
+    $("#quiz-form")[0].reset();
+    $(".progress-bar").css("width", "0%");
+    $("#result-card").hide();
+    $("#quiz-form").show();
+  });
+});
+
+
+
+    </script>
+    <style>
+        .card-header {
+  background-color: #007bff;
+  color: #fff;
+}
+
+.progress-bar {
+  transition: width 0.5s ease-in-out;
+}
+
+    </style>
+
+</head>
+<body>
+    
+    <div class="container mt-5">
+        <div class="row">
+          <div class="col-md-6 offset-md-3">
+            <div class="card">
+              <div class="card-header text-center">
+                <h3>Quiz App</h3>
+                <p>Answer the following questions:</p>
+                <div class="progress mb-3">
+                  <div class="progress-bar" role="progressbar" style="width: 0%;" aria-valuenow="0" aria-valuemin="0" aria-valuemax="100"></div>
+                </div>
+              </div>
+              <div class="card-body">
+                <form id="quiz-form">
+                  <div class="form-group">
+                    <label for="question1">Question 1: What is the capital of France?</label>
+                    <select class="form-control" id="question1" name="question1">
+                      <option value="">Please select an option</option>
+                      <option value="Paris">Paris</option>
+                      <option value="Madrid">Madrid</option>
+                      <option value="Rome">Rome</option>
+                    </select>
+                  </div>
+                  <div class="form-group">
+                    <label for="question2">Question 2: What is the currency of Japan?</label>
+                    <select class="form-control" id="question2" name="question2">
+                      <option value="">Please select an option</option>
+                      <option value="Yen">Yen</option>
+                      <option value="Dollar">Dollar</option>
+                      <option value="Euro">Euro</option>
+                    </select>
+                  </div>
+                  <div class="form-group">
+                    <label for="question3">Question 3: Which of the following is not a programming language?</label>
+                    <div>
+                      <input type="radio" id="question3a" name="question3" value="Python">
+                      <label for="question3a">Python</label>
+                    </div>
+                    <div>
+                      <input type="radio" id="question3b" name="question3" value="HTML">
+                      <label for="question3b">HTML</label>
+                    </div>
+                    <div>
+                      <input type="radio" id="question3c" name="question3" value="Java">
+                      <label for="question3c">Java</label>
+                    </div>
+                  </div>
+                  <div class="form-group">
+                    <label for="question4">Question 4: Who is the CEO of Microsoft?</label>
+                    <div>
+                      <input type="radio" id="question4a" name="question4" value="Bill Gates">
+                      <label for="question4a">Bill Gates</label>
+                    </div>
+                    <div>
+                      <input type="radio" id="question4b" name="question4" value="Satya Nadella">
+                      <label for="question4b">Satya Nadella</label>
+                    </div>
+                    <div>
+                      <input type="radio" id="question4c" name="question4" value="Tim Cook">
+                      <label for="question4c">Tim Cook</label>
+                    </div>
+                  </div>
+                  <div class="form-group">
+                    <label for="question5">Question 5: What is the largest country by area in the world?</label>
+                    <div>
+                      <input type="radio" id="question5a" name="question5" value="Russia">
+                      <label for="question5a">Russia</label>
+                      </div>
+                      <div>
+                      <input type="radio" id="question5b" name="question5" value="China">
+                      <label for="question5b">China</label>
+                      </div>
+                      <div>
+                      <input type="radio" id="question5c" name="question5" value="USA">
+                      <label for="question5c">USA</label>
+                      </div>
+                      </div>
+                      <button type="submit" class="btn btn-primary btn-block">Submit</button>
+                      </form>
+                      </div>
+                      </div>
+                      <div class="card mt-3" id="result-card" style="display: none;">
+                      <div class="card-header text-center">
+                      <h3>Results</h3>
+                      </div>
+                      <div class="card-body text-center">
+                      <p>You scored <span id="score"></span> out of 5.</p>
+                      </div>
+                      </div>
+                      </div>
+                      
+                        </div>
+                      </div>
+      
+</body>
+</html>

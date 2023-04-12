@@ -1,0 +1,28 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>task1</title>
+    <script src="https://ajax.googleapis.com/ajax/libs/jquery/3.6.3/jquery.min.js"></script>
+    <script>
+        $(document).ready(function() {
+  // Handle button click
+  $("#fade-in-btn").click(function() {
+    // Fade in the div
+    $("#fade-in-div").fadeIn();
+  });
+});
+
+    </script>
+
+</head>
+<body>
+    <button id="fade-in-btn">Fade In</button>
+<div id="fade-in-div" style="display:none;">
+  This div will fade in when the button is clicked!
+</div>
+
+</body>
+</html>

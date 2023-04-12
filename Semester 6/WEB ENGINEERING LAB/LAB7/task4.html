@@ -1,0 +1,33 @@
+<!DOCTYPE html>
+<html>
+<head>
+	<title>task4</title>
+	<style type="text/css">
+		#animated-div {
+			position: absolute;
+			top: 50%;
+			left: 50%;
+			transform: translate(-50%, -50%);
+			width: 100px;
+			height: 100px;
+			background-color: red;
+			
+			transition: transform 1s ease-in-out;
+		}
+	</style>
+</head>
+<body>
+	<div id="animated-div"></div>
+
+	<script src="https://code.jquery.com/jquery-3.6.0.min.js"></script>
+	<script type="text/javascript">
+		$(document).ready(function(){
+			setInterval(function(){
+				$('#animated-div').css({
+					'transform': 'rotate('+(-90)+'deg)'
+				});
+			}, 1000);
+		});
+	</script>
+</body>
+</html>

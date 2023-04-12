@@ -1,0 +1,80 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>task5</title>
+    <script src="https://ajax.googleapis.com/ajax/libs/jquery/3.6.3/jquery.min.js"></script>
+    <script>
+        $(document).ready(function() {
+  // Add validation rules to form inputs
+  $('#signup-form').validate({
+    rules: {
+      name: {
+        required: true,
+        minlength: 2
+      },
+      email: {
+        required: true,
+        email: true
+      },
+      password: {
+        required: true,
+        minlength: 6
+      },
+      'confirm-password': {
+        required: true,
+        minlength: 6,
+        equalTo: '#password'
+      }
+    },
+    messages: {
+      name: {
+        required: 'Please enter your name',
+        minlength: 'Name should be at least 2 characters'
+      },
+      email: {
+        required: 'Please enter your email address',
+        email: 'Please enter a valid email address'
+      },
+      password: {
+        required: 'Please enter a password',
+        minlength: 'Password should be at least 6 characters'
+      },
+      'confirm-password': {
+        required: 'Please confirm your password',
+        minlength: 'Password should be at least 6 characters',
+        equalTo: 'Passwords do not match'
+      }
+    },
+    submitHandler: function(form) {
+      // Handle form submission if validation passes
+      alert('Form submitted successfully!');
+    }
+  });
+});
+
+
+    </script>
+
+</head>
+<body>
+    <form id="signup-form">
+  <label for="name">Name:</label>
+  <input type="text" id="name" name="name">
+  <br>
+  <label for="email">Email:</label>
+  <input type="email" id="email" name="email">
+  <br>
+  <label for="password">Password:</label>
+  <input type="password" id="password" name="password">
+  <br>
+  <label for="confirm-password">Confirm Password:</label>
+  <input type="password" id="confirm-password" name="confirm-password">
+  <br>
+  <button type="submit">Submit</button>
+</form>
+
+</body>
+</html>

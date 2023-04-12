@@ -1,0 +1,45 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>task6</title>
+    <script src="https://ajax.googleapis.com/ajax/libs/jquery/3.6.3/jquery.min.js"></script>
+    <script>
+ $(document).ready(function() {
+  $('#checkbox-form').submit(function(e) {
+    e.preventDefault(); // prevent default form submission behavior
+    
+    var checkedBoxes = $('input[type=checkbox]:checked');
+    
+      var message = 'You have selected the following checkboxes: ';
+      checkedBoxes.each(function() {
+        message += $(this).attr('name') + ', ';
+      });
+      message = message.slice(0, -2); // remove the last comma
+      $('#message').text(message); // display the message
+    
+  });
+});
+
+
+
+
+    </script>
+</head>
+<body>
+    <form id="checkbox-form">
+        <label><input type="checkbox" name="checkbox1"> Check 1</label><br>
+        <label><input type="checkbox" name="checkbox2"> Check 2</label><br>
+        <label><input type="checkbox" name="checkbox3"> Check 3</label><br>
+        <label><input type="checkbox" name="checkbox4"> Check 4</label><br>
+        <button type="submit">Submit</button>
+      </form>
+      
+      <div id="message"></div>
+      
+      
+
+</body>
+</html>
