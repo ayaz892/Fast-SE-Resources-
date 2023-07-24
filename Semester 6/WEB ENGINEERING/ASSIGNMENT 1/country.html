@@ -1,0 +1,189 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8">
+  <title>Country Tour</title>
+  <link rel="stylesheet" href="https://maxcdn.bootstrapcdn.com/bootstrap/4.0.0/css/bootstrap.min.css">
+  <style>
+    .option-container {
+      margin-top: 100px;
+      margin-left: 30px;
+    }
+    .option-link {
+      display: flex;
+      flex-direction: row;
+      align-items: center;
+      font-size: 20px;
+      color: white;
+      cursor: pointer;
+      margin-bottom: 10px;
+      background-color: blue;
+    }
+    .option-link i {
+      margin-right: 10px;
+      font-size: 24px;
+    }
+    .option-details {
+      display: none;
+      margin-top: 20px;
+      padding: 20px;
+      background-color: #f5f5f5;
+      border-radius: 5px;
+    }
+    .option-details p {
+      font-size: 18px;
+      line-height: 1.5;
+      margin-bottom: 0;
+    }
+    .arrow-btn{
+        background-color: blue;
+        border: none;
+    }
+    .rating{
+        background-color: coral;
+        width: 50px;
+        color: white;
+    }
+    .btn{
+        margin-top: 60px;
+    }
+    .card{
+        margin-top: 100px;
+        width: 40%;
+        border-color:black;
+        height: 200px;
+        box-shadow: 2px 2px 5px grey;
+    }
+    .navbar {
+        background-color: rgb(226, 214, 197);
+        margin-top: 20px;
+        height: 70px;
+        border: black;
+  
+}
+
+
+    
+  </style>
+</head>
+<body>
+    <nav class="navbar navbar-expand-lg navbar-light bg-info">
+		<form class="form-inline my-2 my-lg-0 ml-auto">
+		  <input class="form-control mr-sm-2" type="search" placeholder="Search Country" aria-label="Search">
+		  <button class="btn btn-outline-dark my-2 my-sm-0" type="submit">Search</button>
+		</form>
+	  </nav>
+
+  <div class="container option-container">
+    <div class="row">
+      <div class="col-md-12">
+        <div class="option-link" data-toggle="collapse" data-target="#touring-arrangements">
+          <i class="fas fa-angle-down"></i>
+          <button class="arrow-btn"><b>></b></button>
+          Touring arrangements to the places
+        </div>
+        <div id="touring-arrangements" class="option-details collapse" style="transition: 5s;">
+          <p><b>Research your destination:</b> Learn about the culture, customs, and laws of the country you will be visiting.<br>
+           <b> Obtain necessary travel documents:</b> Make sure you have a valid passport and any necessary visas or travel permits for your destination.<br>
+            <b>Pack accordingly:</b> Check the weather and climate of your destination and pack appropriate clothing and gear. Don't forget to pack important documents such as your passport,
+             travel itinerary, and any necessary medication.
+          
+        </p>
+        </div>
+        <div class="option-link" data-toggle="collapse" data-target="#accommodation">
+          <i class="fas fa-angle-down"></i>
+          <button class="arrow-btn"><b>></b></button>
+
+          Accommodation
+        </div>
+        <div id="accommodation" class="option-details collapse">
+          <p><b>Choose a safe and convenient location:</b>Research the different neighborhoods and areas of your destination to find a safe and convenient location for your accommodations. Consider factors such as proximity to public transportation and attractions,
+             as well as safety and security. <br>
+             <b>Check the amenities:</b>
+             Make sure that the accommodations you choose have the amenities you need for a comfortable stay, such as air conditioning, Wi-Fi, or a private bathroom.<br>
+             <b>Look for reviews:</b>Read reviews from other travelers who have stayed at the accommodations you are considering. This can give you a better idea of what to expect and help you avoid any unpleasant surprises.
+            </p>
+        </div>
+        <div class="option-link" data-toggle="collapse" data-target="#food">
+          <i class="fas fa-angle-down"></i>
+          <button class="arrow-btn"><b>></b></button>
+
+          Food
+        </div>
+        <div id="food" class="option-details collapse">
+          <p><b>Research local cuisine:</b>Before you go, research the local cuisine of your destination. Look for popular dishes, traditional foods, and recommended restaurants.<br>
+        <b>Try street food:</b>Street food is a great way to try local cuisine and experience the culture. Look for popular street food stalls and ask locals for recommendations.<br>
+        <b>Stay safe: </b>Make sure to practice safe food handling and hygiene practices, such as washing your hands and avoiding undercooked or raw foods.
+
+
+        </p>
+        </div>
+        <div class="option-link" data-toggle="collapse" data-target="#local-travel">
+          <i class="fas fa-angle-down"></i>
+          <button class="arrow-btn"><b>></b></button>
+
+          Local Travel
+        </div>
+        <div id="local-travel" class="option-details collapse">
+          <p>
+            <b>Research local attractions:</b> Research the local attractions and landmarks in your destination. Look for popular 
+            sights, museums, and historical landmarks.<br>
+            <b>Consider guided tours:</b>Guided tours can be a great way to learn about the local history and culture. Look for local tour companies that offer guided tours of the area.
+            <br><b>Use public transportation: </b>Public transportation can be a convenient and cost-effective way to get around your destination. Look for local buses, trains, and subways to get around.
+        </p>
+    </div>
+  </div>
+</div>
+  </div>
+  <hr style="margin-top: 100px; background-color: black; box-shadow: 0px 2px 5px rgba(0.9, 0.9, 0.9, 0.9);">
+  <div class="container-fluid">
+  <div class="card" style="float: right; margin-right: 150px; margin-bottom: 10px;">
+    <div class="row">
+      <div class="col-12 col-md-6 col-lg-4">
+        <img src="flag.png" alt="Canada flag" class="img-fluid">
+      </div>
+      <div class="col-md-8">
+        <div class="card-body">
+          <h5 class="card-title">Canada</h5>
+          <p style="float: right; font-weight: bolder;font-size: xx-large;">$2171</p>
+          <div class="rating">4.7/5</div>
+          <div class="options">
+            <button class="btn btn-primary">Book Ticket</button>
+            <button class="btn btn-secondary">Cancel Ticket</button>
+          </div>
+        </div>
+      </div>
+    </div>
+  </div>
+  
+  <div class="card" style="float: left; margin-left: 100px;">
+    <div class="row">
+      <div class="col-12 col-md-6 col-lg-4">
+        <img src="flag2.png" alt="Canada flag" class="img-fluid">
+      </div>
+      <div class="col-md-8">
+        <div class="card-body">
+          
+          <h5 class="card-title">Australia  </h5> 
+          <p style="float: right; font-weight: bolder;font-size: xx-large;">$2171</p>
+          
+          <div class="rating">4.4/5</div>
+          <div class="options">
+            <button class="btn btn-primary">Book Ticket</button>
+            <button class="btn btn-secondary">Cancel Ticket</button>
+          </div>
+        </div>
+      </div>
+    </div>
+  </div>
+</div>
+  
+  <script src="https://cdnjs.cloudflare.com/ajax/libs/jquery/3.3.1/jquery.min.js"></script>
+  <script src="https://maxcdn.bootstrapcdn.com/bootstrap/4.0.0/js/bootstrap.min.js"></script>
+  <script src="https://kit.fontawesome.com/96d1932564.js" crossorigin="anonymous"></script>
+</body>
+</html>
+
+
+
+

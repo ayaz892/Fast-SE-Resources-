@@ -1,0 +1,99 @@
+<!DOCTYPE html>
+<html>
+<head>
+	<title>Car Rental</title>
+	<link rel="stylesheet" href="https://maxcdn.bootstrapcdn.com/bootstrap/4.5.2/css/bootstrap.min.css">
+
+	<style>
+		.container {
+			margin-top: 50px;
+		}
+		h2 {
+			text-align: center;
+			margin-bottom: 30px;
+		}
+		form {
+			background-color: #f2f2f2;
+			padding: 20px;
+			border-radius: 5px;
+		}
+		input[type="submit"] {
+			margin-top: 20px;
+		}
+	</style>
+</head>
+<body>
+	<div class="container">
+		<h2>Car Rental Service</h2>
+		<form>
+			<div class="form-group">
+				<label for="car-model">Car Model:</label>
+				<select class="form-control" id="car-model">
+					<option>Honda</option>
+					<option>Hyundai</option>
+					<option>Tata</option>
+					<option>Maruti</option>
+					<option>Toyota</option>
+				</select>
+			</div>
+			<div class="form-group">
+				<label for="car-type">Car Type:</label>
+				<select class="form-control" id="car-type">
+					<option>Small Size</option>
+					<option>Full Size</option>
+					<option>Luxury</option>
+					<option>Minivan</option>
+				</select>
+			</div>
+			<div class="form-group">
+				<label for="seating-capacity">Seating Capacity:</label>
+				<input type="number" class="form-control" id="seating-capacity">
+			</div>
+			<div class="form-group">
+				<label for="driver-required">Driver Required:</label>
+				<div class="form-check">
+					<input class="form-check-input" type="radio" name="driver-required" id="driver-required-yes" value="yes">
+					<label class="form-check-label" for="driver-required-yes">
+						Yes
+					</label>
+				</div>
+				<div class="form-check">
+					<input class="form-check-input" type="radio" name="driver-required" id="driver-required-no" value="no">
+					<label class="form-check-label" for="driver-required-no">
+						No
+					</label>
+				</div>
+			</div>
+			<div class="form-group">
+				<label for="ac-required">Air-Conditioner Required:</label>
+				<div class="form-check">
+					<input class="form-check-input" type="radio" name="ac-required" id="ac-required-yes" value="yes">
+					<label class="form-check-label" for="ac-required-yes">
+						Yes
+					</label>
+				</div>
+				<div class="form-check">
+					<input class="form-check-input" type="radio" name="ac-required" id="ac-required-no" value="no">
+          <label class="form-check-label" for="ac-required-no">
+          No
+          </label>
+          </div>
+          </div>
+          <div class="form-group">
+          <label for="pickup-date">Pick-up Date:</label>
+          <input type="date" class="form-control" id="pickup-date">
+          </div>
+          <div class="form-group">
+          <label for="dropoff-date">Drop-off Date:</label>
+          <input type="date" class="form-control" id="dropoff-date">
+          </div>
+          <input type="submit" class="btn btn-primary" value="Book Car">
+          <input type="submit" class="btn btn-danger" value="Cancel Booking" formaction="refund.html">
+        </form>
+          </div>
+          
+          </body>
+          <script src="https://code.jquery.com/jquery-3.2.1.slim.min.js"></script>
+          <script src="https://cdnjs.cloudflare.com/ajax/libs/popper.js/1.12.9/umd/popper.min.js"></script>
+          <script src="https://maxcdn.bootstrapcdn.com/bootstrap/4.0.0/js/bootstrap.min.js"></script>
+          </html>

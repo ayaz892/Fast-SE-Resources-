@@ -1,0 +1,174 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8">
+  <title>Home</title>
+  <link rel="stylesheet" href="https://maxcdn.bootstrapcdn.com/bootstrap/4.0.0/css/bootstrap.min.css">
+  <link rel="stylesheet" href="style.css">
+</head>
+<style>
+    .navbar {
+  font-size: 18px;
+  margin-top: 50px;
+  
+  
+}
+
+.navbar-brand {
+  font-weight: bold;
+}
+
+.navbar-nav .nav-item {
+  margin-right: 20px;
+}
+footer {
+        background-color: #F5F5F5;
+        color: #333;
+        padding: 20px;
+        
+        margin-top: 400px;
+      }
+      b{
+        text-align: center;
+      }
+      .main-container {
+  position: relative;
+  height: 500px;
+}
+
+
+
+.cards-container {
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  height: 100%;
+}
+
+.card {
+  position: relative;
+  width: 300px;
+  height: 400px;
+  margin: 0 20px;
+  box-shadow: 0 5px 10px rgba(0, 0, 0, 0.3);
+  overflow: hidden;
+  border-radius: 10px;
+}
+
+.card:hover .card-img {
+  transform: scale(1.2);
+}
+
+.card:hover .card-text {
+  transform: translateY(0);
+  opacity: 1;
+}
+
+.card-img {
+  position: absolute;
+  top: 0;
+  left: 0;
+  width: 100%;
+  height: 100%;
+  transition: transform 0.5s;
+  background-position: center;
+  background-size: cover;
+}
+
+.summer {
+  background-image: url('summer.png');
+}
+
+.new {
+  background-image: url('newoffer.png');
+}
+
+.discount {
+  background-image: url('special.jpg');
+}
+
+.card-text {
+  position: absolute;
+  bottom: 0;
+  left: 0;
+  width: 100%;
+  padding: 20px;
+  text-align: center;
+  color: #fff;
+  background-color: rgba(0, 0, 0, 0.7);
+  transform: translateY(100%);
+  opacity: 0;
+  transition: transform 0.5s, opacity 0.5s;
+}
+
+@media (max-width: 768px) {
+  .cards-container {
+    flex-direction: column;
+  }
+  
+  .card {
+    margin-bottom: 20px;
+  }
+}
+
+
+</style>
+<body>
+  <div class="container">
+    <img src="travel.png" alt="img" style="width:1500px;height:200px;margin-left: -200px;">
+    <h1 style="text-align: center;margin-top: 20px; font-family: 'Lucida Sans', 'Lucida Sans Regular'">Travel Hub </h1>
+
+  </div>
+  <nav class="navbar navbar-expand-lg navbar-light bg-info ">
+    <button class="navbar-toggler" type="button" data-toggle="collapse" data-target="#navbarNav" aria-controls="navbarNav" aria-expanded="false" aria-label="Toggle navigation">
+      <span class="navbar-toggler-icon"></span>
+    </button>
+    <div class="collapse navbar-collapse" id="navbarNav">
+      <ul class="navbar-nav ml-10px">
+        <li class="nav-item">
+          <a class="nav-link text-warning font-weight-bold" href="package-tours.html">Package</a>
+        </li>
+        <li class="nav-item">
+          <a class="nav-link text-warning font-weight-bold" href="car-rental.html">car-rental</a>
+        </li>
+        <li class="nav-item">
+          <a class="nav-link text-warning font-weight-bold" href="information-desk.html">info-desk</a>
+        </li>
+      </ul>
+    </div>
+  </nav>
+  <div class="main-container">
+    <div class="background-img"></div>
+    <div class="cards-container">
+      <div class="card">
+        <div class="card-img summer"></div>
+        <div class="card-text">Summer Offer</div>
+      </div>
+      <div class="card">
+        <div class="card-img new"></div>
+        <div class="card-text">New Offer</div>
+      </div>
+      <div class="card">
+        <div class="card-img discount"></div>
+        <div class="card-text">Discount Offer</div>
+      </div>
+    </div>
+  </div>
+  
+
+
+  </div>
+  <footer>
+
+    <p>Further Info:FastTravel@gmail.com
+      <br><br>Contact info:+923340976821<br></p>
+      <p style="text-align: center;"><b>Copyright © 2023. All rights reserved.</b>
+    </p>
+  </footer>
+  
+  <script src="https://code.jquery.com/jquery-3.2.1.slim.min.js"></script>
+  <script src="https://cdnjs.cloudflare.com/ajax/libs/popper.js/1.12.9/umd/popper.min.js"></script>
+  <script src="https://maxcdn.bootstrapcdn.com/bootstrap/4.0.0/js/bootstrap.min.js"></script>
+
+</body>
+</html>
